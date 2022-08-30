@@ -130,10 +130,19 @@ var country={}
                 <td>${el.city}</td>
                 <td>${el.population}</td>
                 <td>Edit</td>
-                <td>Delete</td>
+                <td onClick="deleteitem(${el.id})">Delete</td>
             </tr>
             `
         ))
+    }
+
+    function deleteitem(id){
+        fetch(api+`/${id}`,{
+            "method":"DELETE",
+        }
+        ).then((res)=>{
+            fetchingData()
+        })
     }
 
 
