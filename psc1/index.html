@@ -7,6 +7,129 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div>
+        <div>
+            <form id="form">
+                <select id="country-select">
+                    <option value="india">India</option>
+                    <option value="Japan">Japan</option>
+                    <option value="USA">USA</option>                 
+                </select>
+                <input type="text" placeholder="city Name.." id="cityName">
+                <input type="number" placeholder="population" id="population" />
+                <input type="submit">
+            </form>
+            <select id="country-filter">
+                
+            </select>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Country</th>
+                        <th>City</th>
+                        <th>population</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                </tbody>
+            </table>
+        </div>
+    </div>
 </body>
 </html>
+<script>
+
+const api="https://mini-backend1.herokuapp.com/api/AdminData";
+
+var country={}
+
+    var form=document.getElementById("form");
+    form.addEventListener("submit",postData);
+
+    console.log("form",form)
+    function postData(e){
+        e.preventDefault();
+        var country=form.elements[0].value;
+        var city=form.elements[1].value;
+        var population=form.elements[2].value;
+
+        var obj={
+            country,
+            city,
+            population
+        }
+        console.log("obj",obj);
+
+        fetch(api,{
+            "method": "POST",
+            "body" : JSON.stringify(obj),
+            "headers":
+            {
+                "content-type":"application/json"
+            }
+        })
+        .then((res)=>fetchingData())
+        
+    }
+    fetchingData()
+    function fetchingData(){
+        fetch(api).then(res=>res.json()).then((res)=>{
+            let countryselect=document.getElementById("country-filter");
+            country={}
+            res.map((el)=>(
+                country[el.country]=1
+            ));
+            countryselect.innerHTML="<option value='all'> All Country</option>";
+
+            for(var key in country){
+                countryselect.innerHTML+=`<option value=${key}>${key}</option>`
+            }
+
+            countryselect.addEventListener("change",()=>{
+                var selectCountry=countryselect.value;
+                if(selectCountry=="all"){
+                    fetchingData();
+                    return;
+                }
+                fetch(api+`?country=${selectCountry}`).then((res)=>res.json()).then((res)=>
+                displayData(res)
+                )
+            })
+
+
+       
+
+            displayData(res)
+        })
+        
+        
+    }
+
+    function displayData(data){
+        console.log("data",data)
+        var tbody=document.querySelector("tbody");
+        tbody.innerHTML="";
+
+        data.map((el)=>(
+            tbody.innerHTML+=
+            `
+            <tr>
+                <td>${el.id}</td>
+                <td>${el.country}</td>
+                <td>${el.city}</td>
+                <td>${el.population}</td>
+                <td>Edit</td>
+                <td>Delete</td>
+            </tr>
+            `
+        ))
+    }
+
+
+    
+
+</script>
