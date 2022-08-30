@@ -22,6 +22,8 @@
             <select id="country-filter">
                 
             </select>
+            <button id="acc">ACCENDING</button>
+            <button id="dec">DECENDING</button>
             <table>
                 <thead>
                     <tr>
@@ -44,6 +46,7 @@
 <script>
 
 const api="https://mini-backend1.herokuapp.com/api/AdminData";
+var globalArray=[]
 
 var country={}
 
@@ -78,6 +81,7 @@ var country={}
     fetchingData()
     function fetchingData(){
         fetch(api).then(res=>res.json()).then((res)=>{
+            globalArray=[...res]
             let countryselect=document.getElementById("country-filter");
             country={}
             res.map((el)=>(
@@ -96,7 +100,10 @@ var country={}
                     return;
                 }
                 fetch(api+`?country=${selectCountry}`).then((res)=>res.json()).then((res)=>
-                displayData(res)
+                {
+                    globalArray=[...res]
+                    displayData(res)
+                }
                 )
             })
 
@@ -130,6 +137,24 @@ var country={}
     }
 
 
+    document.getElementById("acc").addEventListener("click",()=>{
+        console.log("data",globalArray)
+
+        globalArray.sort((a,b)=>(
+            a.population-b.population
+        ))
+        displayData(globalArray)
+    })
     
+
+
+    document.getElementById("dec").addEventListener("click",()=>{
+        console.log("data",globalArray)
+
+        globalArray.sort((a,b)=>(
+            b.population-a.population
+        ))
+        displayData(globalArray)
+    })
 
 </script>
