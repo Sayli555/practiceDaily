@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #edit-section{
+          /* //  display: none; */
+
+        }
+    </style>
 </head>
 <body>
     <div>
@@ -40,13 +46,18 @@
                 </tbody>
             </table>
         </div>
+        <div id="edit-section">
+
+        </div>
     </div>
 </body>
 </html>
 <script>
 
 const api="https://mini-backend1.herokuapp.com/api/AdminData";
-var globalArray=[]
+var globalArray=[];
+
+var selectarray=["india","japan","usa"]
 
 var country={}
 
@@ -129,7 +140,7 @@ var country={}
                 <td>${el.country}</td>
                 <td>${el.city}</td>
                 <td>${el.population}</td>
-                <td>Edit</td>
+                <td onClick="edititem(${el.id})">Edit</td>
                 <td onClick="deleteitem(${el.id})">Delete</td>
             </tr>
             `
@@ -145,6 +156,84 @@ var country={}
         })
     }
 
+// **************************************************edit section ****************************************************
+
+function edititem(id){
+
+    fetch(api+`/${id}`).then((res)=>res.json()).then((res)=>{
+        var editSection=document.getElementById("edit-section");
+        editSection.innerHTML="";
+        editSection.style.display="block";
+
+        var select=document.createElement("select");
+
+        selectarray.map((el)=>{
+
+            if(el==res.country){
+                select.innerHTML+=`<option selected value=${el}>${el}</option>`
+            }
+            else{
+                select.innerHTML+=`<option value=${el}>${el}</option>`
+            }
+        }      
+        )
+
+        var city=document.createElement("input");
+        city.setAttribute("type","text");
+        city.setAttribute("placeholder","city name...");
+        
+
+
+        
+        var population=document.createElement("input");
+        population.setAttribute("type","number");
+        population.setAttribute("placeholder","populations...");
+      
+
+
+        var btn=document.createElement("button");
+        btn.innerHTML="submit";
+        btn.addEventListener("click",()=>{
+
+
+            var obj={
+               country:select.value,
+                city:city.value,
+                population:population.value
+
+            }
+            console.log(obj);
+
+
+            fetch(api+`/${id}`,{
+                "method":'PATCH',
+                "body":JSON.stringify(obj),
+                "headers":{
+                    "content-type":"application/json"
+                }
+
+            }).then((res)=>res.json()).then((res)=>{
+                editSection.style.display="none";
+                fetchingData()
+            })
+
+        
+
+        })
+
+
+        editSection.append(select,city,population,btn)
+
+    })
+}
+
+
+
+
+
+
+
+// *****************************************************edit section end************************************************************
 
     document.getElementById("acc").addEventListener("click",()=>{
         console.log("data",globalArray)
