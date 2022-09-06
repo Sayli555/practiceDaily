@@ -29,7 +29,7 @@ const Form = () => {
         </Box>
         <Text>{pin}</Text>
         <Box>
-            <Button isLoading={loading} onClick={()=>{
+            <Button bg={"primary1.c1"} isLoading={loading} onClick={()=>{
                 setloading(true);
 
                 setTimeout(()=>{

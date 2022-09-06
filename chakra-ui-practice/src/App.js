@@ -1,12 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
-import { Box, Container } from '@chakra-ui/react';
+import { Box, Container, Flex, Heading, Text, VStack } from '@chakra-ui/react';
 import Form from './components/Form';
 
 function App() {
   return (
     <Container >
-      <Form/>
+      <Flex>
+        <VStack>
+          <VStack>
+            <Heading>
+              Yours Details
+            </Heading>
+            <Text></Text>
+          </VStack>
+        </VStack>
+      </Flex>
     </Container>
   );
 }
