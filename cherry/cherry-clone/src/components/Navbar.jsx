@@ -1,14 +1,14 @@
 import React from 'react';
 import logo from "../assets/logo.svg"
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <section className="navbar">
         <div className="container">
             <img className="logo" src={logo} />
             <div className="location">
-                <span className="city"> Pune</span>
-                <span className="state">Maharashtra, India</span>
+                <span className="city">{props.location.city}</span>
+                <span className="state">{props.location.state}, {props.location.counrty}</span>
             </div>
             <div className="navbar-options">
                 <div className="navbar-option">
