@@ -6,9 +6,12 @@ const Filter = ({filter,filterby,updatedfilter}) => {
             <h1>50 restaurants</h1>
            
             <div className="restaurant-options">
-            {Object.entries(filter).map(([key,values])=>(
-                  <div key={key} className="restaurant-option" onClick={()=>updatedfilter(key)} >
-                  {values}
+            {filter.map((key,values)=>(
+              
+                  <div key={key} 
+                  className={`restaurant-option ${filterby===values ? "underline" : ""}`} 
+                  onClick={()=>updatedfilter(key)} >
+                  {key}
               </div>
                 ))}
                      

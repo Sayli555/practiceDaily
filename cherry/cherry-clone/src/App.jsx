@@ -10,14 +10,14 @@ import restaurent from "./data/restaurent.json"
 import { useState } from 'react';
 
 
-const filter={
-"1":"cost high to low",
-"2":"cost low to high",
-"3":"rating",
-"4":"delivery time",
-"5":"relvnce"
-}
+const filter=[
+"cost high to low",
+"cost low to high",
+"rating",
+"delivery time",
+"relvnce"
 
+]
 
 function App() {
   const [filterby,setfilterby]=useState("");
@@ -25,13 +25,16 @@ function App() {
 
   const updatedfilter=(value)=>{
     switch(value){
-      case "1" : {
-        console.log("data",data);
+      case "cost high to low" : {
+        setfilterby(0)
+        console.log("data",value);
         data.sort((a,b)=> (b.costfortwo-a.costfortwo));
         setdata([...data]); 
+
         break;
       }
-      case "2" : {
+      case "cost low to high" : {
+        setfilterby(1)
         console.log("data",data);
         data.sort((a,b)=> (a.costfortwo-b.costfortwo));
         setdata([...data]);
