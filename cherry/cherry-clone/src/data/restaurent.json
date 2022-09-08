@@ -1,0 +1,93 @@
+
+{
+    "restaurents":[
+
+        {
+            "id":1,
+            "img":"https://raw.githubusercontent.com/riteshf/cherry/main/assets/restaurant1.jpeg",
+
+            "title":"Chaitanya Parathas",
+            "sub":["North", "India", "Punjabi", "Chinese", "Thalis Combo", "Beverages"],
+            "rating":4.3,
+            "deliverytimings":"33 mins",
+            "costfortwo":200,
+            "offer":["20% off" , "Use TRYNEW"]
+
+        },
+        {
+            "id":2,
+            "img":"https://raw.githubusercontent.com/riteshf/cherry/main/assets/restaurant2.jpeg",
+
+            "title":"MH 12 Pav Bhaji",
+            "sub":["Snacks", "Pizza", "Beverages", "Steet", "Food"],
+            "rating":4.0,
+            "deliverytimings":"25 mins",
+            "costfortwo":250,
+            "offer":["10% off" , "Use TRYNEW"]
+
+        },
+        {
+            "id":3,
+            "img":"https://raw.githubusercontent.com/riteshf/cherry/main/assets/restaurant3.jpeg",
+
+            "title":"Lunch Box",
+            "sub":["North", "India", "Punjabi", "Chinese", "Thalis Combo", "Beverages"],
+            "rating":4.2,
+            "deliverytimings":"31 mins",
+            "costfortwo":200,
+            "offer":["20% off" , "Use TRYNEW"]
+
+        },
+        {
+            "id":4,
+            "img":"https://raw.githubusercontent.com/riteshf/cherry/main/assets/restaurant4.jpeg",
+
+            "title":"The Hungry Hippe",
+            "sub":["North", "India", "Punjabi", "Chinese", "Thalis Combo", "Beverages"],
+            "rating":2.0,
+            "deliverytimings":"38 mins",
+            "costfortwo":500,
+            "offer":["40% off" , "Use TRYNEW"]
+
+        },
+        {
+            "id":5,
+            "img":"https://raw.githubusercontent.com/riteshf/cherry/main/assets/restaurant5.jpeg",
+
+            "title":"Ovenstory Pizzas",
+            "sub":["Pizzas"],
+            "rating":4.1,
+            "deliverytimings":"45 mins",
+            "costfortwo":600,
+            "offer":["50% off" , "Use TRYNEW"]
+
+        },
+        {
+            "id":6,
+            "img": "https://raw.githubusercontent.com/riteshf/cherry/main/assets/restaurant6.jpeg",
+
+            "title":"Starbucks Coffee",
+            "sub":["Beverages", "Ice Cream"],
+            "rating":4.3,
+            "deliverytimings":"38 mins",
+            "costfortwo":400,
+            "offer":["50% off" , "Use TRYNEW"]
+
+        },
+        {
+            "id":7,
+            "img":"https://raw.githubusercontent.com/riteshf/cherry/main/assets/restaurant7.jpeg",
+
+            "title":"Chaitanya Parathas",
+            "sub":["North", "India", "Punjabi", "Chinese", "Thalis Combo", "Beverages"],
+            "rating":4.3,
+            "deliverytimings":"33 mins",
+            "costfortwo":200,
+            "offer":["20% off" , "Use TRYNEW"]
+
+        }
+    ]
+
+    
+}
+

@@ -4,14 +4,11 @@ import offer2 from "../assets/offer2.jpeg"
 import offer3 from "../assets/offer3.jpeg"
 import offer4 from "../assets/offer4.jpeg"
 
-const Offers = () => {
+const Offers = (props) => {
   return (
     <section className="offers">
         <div className="container">
-            <img className="offer" src={offer1} />
-            <img className="offer" src={offer2} />
-            <img className="offer" src={offer3} />
-            <img className="offer" src={offer4} />
+            {props.offers.map((off) =>  <img key={off} className="offer" src={off} /> )}       
         </div>
     </section>
   )
