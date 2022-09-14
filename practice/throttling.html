@@ -7,28 +7,37 @@
     <title>Document</title>
 </head>
 <body>
-    <button id="btn" onclick="throttl()">click me</button>
+    <!-- <button id="btn" onclick="throttl()">click me</button> -->
 </body>
 </html>
 <script>
 
 
+// ***************************button trottle*****************************************************
+    // const throttling=(fn,delay)=>{
+    //     return function(...args){
+    //         document.getElementById("btn").disabled=true
+    //         setTimeout(()=>{
+    //             fn()
+    //         },delay)
+    //     }
+    // }
 
-    const throttling=(fn,delay)=>{
-        return function(...args){
-            document.getElementById("btn").disabled=true
-            setTimeout(()=>{
-                fn()
-            },delay)
-        }
-    }
+
+    // const throttl=throttling(()=>{
+    //     document.getElementById("btn").disabled=false;
+    //     console.log("click func")
+    // },3000)
 
 
-    const throttl=throttling(()=>{
-        document.getElementById("btn").disabled=false;
-        console.log("click func")
-    },3000)
 
+    // ****************************************resize trottle********************************************
+
+    
+
+   
+
+   
 
 
 </script>
