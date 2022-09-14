@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="type something..."  onchange="debounce()" />
+    <button  onclick="adddebounce(add,1000)" >click for add</button>
+</body>
+</html>
+<script>
+
+
+
+var count=0
+function getdata(){
+console.log("fetching",count++)
+}
+
+function mydebounce(func,delay){
+    let timer;
+    return function (...args){
+        if(timer){
+            clearTimeout(timer)
+        }
+      timer= setTimeout(()=>{
+            func()
+        },delay)
+
+    }
+}
+
+const debounce= mydebounce(getdata,500);
+
+
+// ******************************* add debounce ****************************************************
+
+var count1=0
+function add(){
+    console.log(count1++)
+}
+
+
+function adddebounce(add,delay){
+
+    let timer;
+    
+    if(timer){
+        clearTimeout(timer)
+    }
+    timer=setTimeout(()=>{
+        add()
+    },delay)
+
+
+}
+
+
+
+
+
+
+</script>
