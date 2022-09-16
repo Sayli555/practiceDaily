@@ -19,14 +19,14 @@ function App() {
       <h1>Count:{count}</h1>
       <button 
       onClick={()=>{
-        dispatch(subtract())
+        dispatch(subtract(5))
       }}>
         -
       </button>
 
       <button
         onClick={()=>{
-          dispatch(add())
+          dispatch(add(10))
         }}
       >
         +

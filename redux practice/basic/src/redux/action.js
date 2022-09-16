@@ -1,6 +1,6 @@
 import * as type from "./action.type"
 
 
-export const add=()=>({type:type.INCREMENT});
+export const add=(value)=>({type:type.INCREMENT,payload:value});
 
-export const subtract=()=>({type:type.DECREMENT})
+export const subtract=(value)=>({type:type.DECREMENT,payload:value})

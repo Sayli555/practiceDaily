@@ -9,11 +9,11 @@
     console.log(state,action);
     switch(action.type){
         case type.INCREMENT :{
-            state.count++;
+            state.count+=action.payload;
             return {...state}
         }
         case type.DECREMENT :{
-            state.count--;
+            state.count-=action.payload;
             return {...state}
         }
         default :{
