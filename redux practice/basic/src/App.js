@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import * as type from "./redux/action.type"
+import { add, subtract } from './redux/action';
 
 function App() {
 
@@ -17,14 +19,14 @@ function App() {
       <h1>Count:{count}</h1>
       <button 
       onClick={()=>{
-        dispatch({type:"subtract"})
+        dispatch(subtract())
       }}>
         -
       </button>
-      
+
       <button
         onClick={()=>{
-          dispatch({type:"add"})
+          dispatch(add())
         }}
       >
         +
