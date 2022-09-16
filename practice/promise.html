@@ -11,5 +11,51 @@
 </body>
 </html>
 <script>
-    
+
+
+//promises using constructor function;
+
+
+const pobj1= new Promise((res,rej)=>{
+
+    setTimeout(()=>{
+        var arr=[1,2,3,4,5];
+       res(arr)
+    //   rej("error while excuting")
+    },2000)
+})
+
+
+const getbiodata=(index)=>{
+    return new Promise((res,rej)=>{
+        setTimeout((index)=>{
+            let data={
+            name:"savi",
+            age:"24"
+        }
+        res(`my roll no is ${index}. name is ${data.name} . age is ${data.age}`)
+
+        
+        },2000,index)
+      
+
+    })
+}
+
+
+//to show this function resolve we use "then method" to show output of resolve function;
+// if rejected then use catch for show its rejected
+
+pobj1.then((res)=>{
+    console.log(res);
+    return getbiodata(res[1])
+}).then((res)=>{
+    console.log(res)
+})
+.catch((e)=>{
+    console.log(e)
+})
+
+
+
 </script>
