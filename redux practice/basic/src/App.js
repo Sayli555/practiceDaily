@@ -15,14 +15,20 @@ function App() {
   return (
     <div className="App">
       <h1>Count:{count}</h1>
-      <button onClick={()=>{
+      <button 
+      onClick={()=>{
         dispatch({type:"subtract"})
-      }}>-</button>
+      }}>
+        -
+      </button>
+      
       <button
         onClick={()=>{
           dispatch({type:"add"})
         }}
-      >+</button>
+      >
+        +
+      </button>
     </div>
   );
 }

@@ -7,8 +7,18 @@
 
  export const reducer=(state,action)=>{
     console.log(state,action);
-    if(action.type==="add"){
-        state.count++
+    switch(action.type){
+        case "add" :{
+            state.count++;
+            return {...state}
+        }
+        case "subtract" :{
+            state.count--;
+            return {...state}
+        }
+        default :{
+            return state;
+        }
     }
-    return {...state};
+ 
  }
