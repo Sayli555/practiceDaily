@@ -1,8 +1,11 @@
 
-import { legacy_createStore ,combineReducers} from "redux";
+import { legacy_createStore ,combineReducers, compose, applyMiddleware} from "redux";
 import { counter_reducer } from "./counter.reducer";
 import { todo_reducer } from "./todo.reducer";
 
+
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
 const rootReducer=combineReducers({
     counter:counter_reducer,
@@ -10,4 +13,4 @@ const rootReducer=combineReducers({
 })
 
 
-export const store=legacy_createStore(rootReducer)
+export const store=legacy_createStore(rootReducer,composeEnhancers(applyMiddleware()))

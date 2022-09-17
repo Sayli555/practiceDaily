@@ -10,7 +10,18 @@ export const todo_reducer=(state=init,action)=>{
 
     switch (action.type){
         case type.ADD_TODO :{
-            return {...state}
+           
+            return {
+                ...state,
+                todos:[
+                    ...state.todos,
+                    {
+                        ...action.payload,
+                        id:state.todos.length
+                    },
+                ],
+            
+            }
         }
 
         case type.COMPLITE_TODO :{
