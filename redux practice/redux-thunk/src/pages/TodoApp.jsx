@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import * as type from "../store/action";
+import * as type from "../store/Todo/todo.action";
 
 
 const TodoApp = () => {

@@ -1,10 +1,4 @@
-
-import * as type from "./action.type"
-
-export const countInc=()=>({type:type.INCREMENT_COUNTER});
-export const countDec=()=>({type:type.DECREMENT_COUNTER});
-
-
+import * as type from "./todo.action.type"
 
 export const todoAdd=(payload)=>({type:type.ADD_TODO,payload});
 export const todocomplite=(id)=>({type:type.COMPLITE_TODO,payload:id});

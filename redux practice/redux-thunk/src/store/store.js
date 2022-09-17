@@ -1,7 +1,7 @@
 
 import { legacy_createStore ,combineReducers, compose, applyMiddleware} from "redux";
-import { counter_reducer } from "./counter.reducer";
-import { todo_reducer } from "./todo.reducer";
+import { counter_reducer } from "./counter/counter.reducer";
+import { todo_reducer } from "./Todo/todo.reducer";
 
 
 

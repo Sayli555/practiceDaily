@@ -1,4 +1,4 @@
-import * as type from "./action.type";
+import * as type from "./counter.action.type";
 
 
 const init={

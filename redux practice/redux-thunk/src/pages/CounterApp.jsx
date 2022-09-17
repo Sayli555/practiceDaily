@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import * as type from "../store/action"
+import * as type from "../store/counter/counter.action"
 
 const CounterApp = () => {
 

@@ -1,5 +1,4 @@
-
-import * as type from "./action.type";
+import * as type from "./todo.action.type"
 
 const init={
     todos:[],
