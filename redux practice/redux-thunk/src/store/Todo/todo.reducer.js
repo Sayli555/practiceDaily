@@ -1,6 +1,8 @@
 import * as type from "./todo.action.type"
 
 const init={
+    loading:false,
+    error:false,
     todos:[],
 
 }
@@ -8,6 +10,31 @@ const init={
 export const todo_reducer=(state=init,action)=>{
 
     switch (action.type){
+
+        case type.GET_TODOS_LOADING:{
+            return {
+                ...state,
+                loading:true
+            }
+        }
+
+        case type.GET_TODOS_SUCCESS :{
+            return {
+                ...state,
+                loading:false,
+                todos:action.payload
+            }
+        }
+
+        case type.GET_TODOS_ERROR :{
+            return {
+                ...state,
+                loading:false,
+                error:true
+            }
+        }
+
+
         case type.ADD_TODO :{
            
             return {

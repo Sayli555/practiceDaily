@@ -1,0 +1,15 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "value": "json-server",
+      "isComplited": "false"
+    },
+    {
+      "id": 2,
+      "value": "json",
+      "isComplited": "false"
+    }
+  ]
+ 
+}

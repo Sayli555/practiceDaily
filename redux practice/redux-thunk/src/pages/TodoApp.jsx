@@ -1,4 +1,5 @@
-import React, { useRef, useState } from 'react'
+import axios from 'axios';
+import React, { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import * as type from "../store/Todo/todo.action";
 
@@ -6,7 +7,7 @@ import * as type from "../store/Todo/todo.action";
 const TodoApp = () => {
   const dispatch=useDispatch();
   const ref=useRef()
-  const todo=useSelector((state)=>state.todo.todos);
+  const {todos,error,loading}=useSelector((state)=>state.todo);
 
   const addtodo=()=>{
     const value=ref.current.value
@@ -18,6 +19,15 @@ const TodoApp = () => {
     }))
   }
 
+  useEffect(()=>{
+
+    type.getTodos(dispatch)
+   
+  },[])
+
+  if(loading) return <div><h1>Loading...</h1></div>
+  if(error) return <h1>Something went wrong...</h1>
+
   return (
     <div>
       <h1>Todo</h1>
@@ -27,7 +37,7 @@ const TodoApp = () => {
     <br/>
     <br/>
     {
-      todo.map((todo)=>(
+      todos.map((todo)=>(
         <div key={todo.id}>{todo.value}</div>
       )
 
