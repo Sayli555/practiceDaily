@@ -8,7 +8,7 @@ export const getTodos=(dispatch)=>{
     setTimeout(()=>{
         dispatch({type:type.GET_TODOS_SUCCESS,payload:r.data})
 
-    },5000)
+    },1000)
       })
       .catch((error)=>{
         dispatch({type:type.GET_TODOS_ERROR})
@@ -17,7 +17,19 @@ export const getTodos=(dispatch)=>{
 
 
 
-export const todoAdd=(payload)=>({type:type.ADD_TODO,payload});
+export const todoAdd=(dispatch,payload)=>{
+    dispatch({type:type.ADD_TODO_LOADING})
+    axios.post("http://localhost:8080/todos",payload).then((r)=>{
+
+        dispatch({type:type.ADD_TODO_SUCCESS,payload:r.data})
+    }).catch((e)=>{
+        dispatch({type:type.ADD_TODO_ERROR})
+    })
+};
+
+
+
+
 export const todocomplite=(id)=>({type:type.COMPLITE_TODO,payload:id});
 export const todoupdated=(id)=>({type:type.UPDATED_TODO,payload:id});
 export const todoremove=(id)=>({type:type.REMOVE_TODO,payload:id})

@@ -7,16 +7,16 @@ import * as type from "../store/Todo/todo.action";
 const TodoApp = () => {
   const dispatch=useDispatch();
   const ref=useRef()
-  const {todos,error,loading}=useSelector((state)=>state.todo);
+  const {data:todos,error,loading}=useSelector((state)=>state.todo.gettodos);
+
+  const {loading:isloading}=useSelector((state)=>state.todo.addtodos)
 
   const addtodo=()=>{
     const value=ref.current.value
-    dispatch(type.todoAdd({
+    type.todoAdd(dispatch,{
       value,
-      iscomplited:false,
-    
-      
-    }))
+      iscomplited:false,   
+    })
   }
 
   useEffect(()=>{
@@ -33,7 +33,7 @@ const TodoApp = () => {
       <h1>Todo</h1>
     <input ref={ref} type="text" placeholder='type todos...' />
 
-    <button onClick={addtodo}>ADD</button>
+    <button onClick={addtodo} disabled={isloading}>ADD</button>
     <br/>
     <br/>
     {

@@ -3,13 +3,17 @@
     {
       "id": 1,
       "value": "json-server",
-      "isComplited": "false"
+      "isComplited": false
     },
     {
       "id": 2,
       "value": "json",
-      "isComplited": "false"
+      "isComplited": false
+    },
+    {
+      "value": "s",
+      "iscomplited": false,
+      "id": 3
     }
   ]
- 
 }
