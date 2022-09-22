@@ -2,7 +2,7 @@ import axios from "axios";
 import * as type from "./todo.action.type";
 
 
-export const getTodos=(dispatch)=>{
+export const getTodos =()=> (dispatch) =>{
     dispatch({type: type.GET_TODOS_LOADING})
    return axios.get("http://localhost:8080/todos").then((r)=>{
     setTimeout(()=>{
@@ -16,8 +16,10 @@ export const getTodos=(dispatch)=>{
 }
 
 
+//thunk will take dispatch as argument and return object not promise
 
-export const todoAdd=(dispatch,payload)=>{
+
+export const todoAdd = (payload)=> (dispatch)=>{
     dispatch({type:type.ADD_TODO_LOADING})
     axios.post("http://localhost:8080/todos",payload).then((r)=>{
 

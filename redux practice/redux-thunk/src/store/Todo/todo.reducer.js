@@ -4,13 +4,14 @@ const init={
     addtodos:{
         loading:false,
         error:false,
-        data:{},
+       
     },
     gettodos:{
         loading:false,
         error:false,
-        data:[],
+       
     },
+    data:[],
 
     
     
@@ -25,9 +26,11 @@ export const todo_reducer=(state=init,action)=>{
             return {
                 ...state,
                 gettodos:{
-                    ...state.gettodos,
-                    loading:true
+                    // ...state.gettodos,
+                    loading:true,
+                    error:false
                 }
+
                 
             }
         }
@@ -36,10 +39,12 @@ export const todo_reducer=(state=init,action)=>{
             return {
                 ...state,
                 gettodos:{
-                    ...state.gettodos,
+                   // ...state.gettodos,
                     loading:false,
-                    data:action.payload
-                }
+                    error:false
+                    
+                },
+                data:action.payload
                
             }
         }
@@ -48,7 +53,7 @@ export const todo_reducer=(state=init,action)=>{
             return {
                 ...state,
                 gettodos:{
-                    ...state.gettodos,
+                   // ...state.gettodos,
                     loading:false,
                     error:true,
 
@@ -62,9 +67,11 @@ export const todo_reducer=(state=init,action)=>{
             return {
                 ...state,
                 addtodos:{
-                    ...state.addtodos,
-                    loading:true
-                }
+                    
+                    loading:true,
+                    error:false
+                },
+              
                 
             }
         }
@@ -72,14 +79,13 @@ export const todo_reducer=(state=init,action)=>{
         case type.ADD_TODO_SUCCESS :{
             return {
                 ...state,
-                gettodos:{
-                    data:[...state.gettodos.data,action.payload]
-                },
+               
                 addtodos:{
                     ...state.addtodos,
                     loading:false,
-                    data:action.payload
-                }
+                  //  data:action.payload
+                },
+                data:[...state.data,action.payload]
                
             }
         }
@@ -88,7 +94,7 @@ export const todo_reducer=(state=init,action)=>{
             return {
                 ...state,
                 addtodos:{
-                    ...state.addtodos,
+                  //  ...state.addtodos,
                     loading:false,
                     error:true,
 

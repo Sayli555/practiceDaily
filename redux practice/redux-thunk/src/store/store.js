@@ -2,6 +2,7 @@
 import { legacy_createStore ,combineReducers, compose, applyMiddleware} from "redux";
 import { counter_reducer } from "./counter/counter.reducer";
 import { todo_reducer } from "./Todo/todo.reducer";
+import thunk from 'redux-thunk';
 
 
 
@@ -13,4 +14,4 @@ const rootReducer=combineReducers({
 })
 
 
-export const store=legacy_createStore(rootReducer,composeEnhancers(applyMiddleware()))
+export const store=legacy_createStore(rootReducer,composeEnhancers(applyMiddleware(thunk)))
