@@ -15,19 +15,86 @@
 
 // ************************* 1. reverse the array *****************************************
 
-let arr=[10,24,30];
-let l=0;
-let r=arr.length-1
+// let arr=[10,24,30];
+// let l=0;
+// let r=arr.length-1
 
-while(l<r){
-    let temp=arr[l];
-    arr[l]=arr[r];
-    arr[r]=temp;
-    l++;
-    r--
+// while(l<r){
+//     let temp=arr[l];
+//     arr[l]=arr[r];
+//     arr[r]=temp;
+//     l++;
+//     r--
+// }
+
+// console.log(arr)
+
+
+
+// *********************** 2.maximum-and-minimum-in-an-array *******************************************
+
+// let arr = [3,5,4,1,9];
+
+// let min=9999;
+// let max=0;
+
+// for(let i=0;i<arr.length;i++){
+//     if(arr[i]<min){
+//         min=arr[i]
+//     }
+//     if(arr[i]>max){
+//         max=arr[i]
+//     }
+// }
+
+// console.log(min,max)
+
+
+// *************************************** 3.maximum-difference*******************************************
+
+let arr =[2, 4, 8, 7, 7, 9, 3];
+
+let stl=[];
+let sl=[];
+
+for(var i=arr.length-1;i>=0;i--){
+    while(stl.length!=0 && stl[stl.length-1]>=arr[i]){
+        stl.pop()
+    }
+    if(stl.length==0){
+        sl.push(0)
+    }
+    if(stl.length!=0){
+        sl.push(stl[stl.length-1])
+    }
+    stl.push(arr[i])
 }
 
-console.log(arr)
+//console.log(sl);
 
+let str=[];
+let sr=[];
+
+for(var i=0;i<arr.length;i++){
+    while(str.length!=0 && str[str.length-1]>=arr[i]){
+        str.pop()
+    }
+    if(str.length!=0){
+        sr.push(str[str.length-1])
+    }
+    if(str.length==0){
+        sr.push(0)
+    }
+    str.push(arr[i])
+}
+
+//console.log(sr)
+let ans=-1
+for(var i=0;i<sl.length;i++){
+     ans=Math.max(ans,Math.abs(sl[i]-sr[i]))
+   
+}
+
+console.log(ans)
 
 </script>
