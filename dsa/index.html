@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+
+// ********************************** variable silding windo ********************************************************
+
+let arr =[10,5,2,7,1,9];
+let x=15;
+let n=arr.length;
+
+function largesum(arr,k,n){
+
+    let hm={};
+    let max_sum=0;
+    let max_len=0;
+    var sum=0
+    for(var i=0;i<n;i++){
+        sum+=arr[i];
+        if(sum==k){
+            max_len=i+1
+        }
+        if(hm[sum]==undefined){
+            hm[sum]=i;
+        }
+        if(hm[sum-k]!=undefined){
+            
+           if(i-hm[sum-k]>max_len){
+            max_len=i-hm[sum-k]
+           }
+        }
+    }
+    return max_len
+
+}
+
+console.log(largesum(arr,x,n))
+
+
+
+
+// ********************************** variable silding windo ********************************************************
+
+</script>
