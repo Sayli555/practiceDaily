@@ -6,34 +6,19 @@
       "isComplited": false
     },
     {
-      "title": "sa",
-      "isComplited": false,
+      "title": "javascript",
+      "isComplied": false,
       "id": 2
     },
     {
       "title": "sayli",
-      "isComplited": false,
+      "isComplied": false,
       "id": 3
     },
     {
-      "title": "sa",
-      "isComplited": false,
+      "title": "react",
+      "isComplied": false,
       "id": 4
-    },
-    {
-      "title": "sayli",
-      "isComplited": false,
-      "id": 5
-    },
-    {
-      "title": "sa",
-      "isComplited": false,
-      "id": 6
-    },
-    {
-      "title": "sayli",
-      "isComplited": false,
-      "id": 7
     }
   ]
 }

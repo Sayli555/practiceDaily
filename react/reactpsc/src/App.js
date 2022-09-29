@@ -3,21 +3,22 @@ import './App.css';
 import { useEffect, useState } from 'react';
 
 function App() {
-  const [newtodo,setNewTodo]=useState("");
-  const [todo,settodo]=useState([]);
-  console.log(todo)
+  const [todo,setTodo]=useState([]);
+  const [newtodo,setnewtodo]=useState("")
 
 
   useEffect(()=>{
     const getdata=()=>{
-      fetch("http://localhost:8081/todos").then((r)=>r.json()).then((res)=>settodo(res))
+      fetch("http://localhost:8081/todos").then((r)=>r.json()).then((r)=>setTodo(r))
     }
     getdata()
   },[])
 
 
-  const addtodo=()=>{
+  //adding todo here
+  
 
+  const addtodo=()=>{
     fetch("http://localhost:8081/todos",{
       method:"POST",
       headers:{
@@ -25,26 +26,24 @@ function App() {
       },
       body:JSON.stringify({
         title:newtodo,
-        isComplited:false
+        isComplied:false
       })
     })
-    .then((r)=>r.json()).then((r)=>{
-     settodo([...todo,r])
-      setNewTodo("")
-     
+    .then((r)=>r.json())
+    .then((r)=>{
+      setTodo([...todo,r]);
+      setnewtodo("")
     })
- 
-    setNewTodo("")
   }
+
+
   return (
     <div className="App">
-      <input type="text" value={newtodo} placeholder='type todo..' onChange={(e)=>{
-        setNewTodo(e.target.value)
-      }} />
-      <button onClick={addtodo}>+</button>
-      {todo.map((e)=>(
-        <div key={e.id}>{e.title}</div>
-      ))}
+     <input type='text' value={newtodo} placeholder='type todo heare' onChange={(e)=>setnewtodo(e.target.value)} />
+     <button onClick={addtodo}>+</button>
+     {todo.map((e)=>(
+      <div key={e.id}>{e.title}</div>
+     ))}
     </div>
   );
 }
