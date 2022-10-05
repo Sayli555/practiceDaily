@@ -4,17 +4,23 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ChakraProvider } from '@chakra-ui/react';
-import {CarttProvider} from "./context/CartContext"
+import {CarttProvider} from "./context/CartContext";
+import { AuthProvider } from './context/authContest';
+import {TheamProvider} from "./context/TheamContext"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+  <TheamProvider>
+  <AuthProvider>
+
+  
   <CarttProvider>
   <App />
   </CarttProvider>
  
-   
-
+  </AuthProvider>
+</TheamProvider>
   
    
   </React.StrictMode>
