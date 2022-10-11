@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Feeds from './pages/Feeds';
 import Login from './pages/Login';
+import RequireAuth from './HOC/RequireAuth';
 
 function App() {
   return (
@@ -13,7 +14,15 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="/feeds" element={<Feeds/>} />
+        <Route path="/feeds" element={
+          <RequireAuth>
+              <Feeds/>
+          </RequireAuth>
+        
+        }
+        />
+
+
         <Route path="/login" element={<Login/>} />
       </Routes>
     </div>
