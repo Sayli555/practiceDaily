@@ -1,11 +1,6 @@
 {
   "todos": [
     {
-      "id": 1,
-      "title": "json-server",
-      "isComplited": {}
-    },
-    {
       "id": 2,
       "title": "json-server",
       "isComplited": false
@@ -14,11 +9,6 @@
       "id": 4,
       "title": "json-server",
       "isComplited": false
-    },
-    {
-      "title": "sayli",
-      "isComplited": false,
-      "id": 5
     }
   ]
 }
