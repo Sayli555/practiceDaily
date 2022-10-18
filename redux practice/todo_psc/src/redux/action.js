@@ -85,39 +85,39 @@ export const postTodoFetch=(payload)=>(dispatch)=>{
 // *********************************SINGLE**************************************************
 
 
-const singleTodoRequest=(payload)=>{
-    return {
-        type:types.SINGLE_TODO_REQUEST,
-        payload
-    }
-}
+// const singleTodoRequest=(payload)=>{
+//     return {
+//         type:types.SINGLE_TODO_REQUEST,
+//         payload
+//     }
+// }
 
 
-const singleTodoSuccess=(payload)=>{
-    return {
-        type:types.SINGLE_TODO_SUCCESS,
-        payload
-    }
-}
+// const singleTodoSuccess=(payload)=>{
+//     return {
+//         type:types.SINGLE_TODO_SUCCESS,
+//         payload
+//     }
+// }
 
 
-const singleTodoFailure=(payload)=>{
-    return {
-        type:types.SINGLE_TODO_FAILURE,
-        payload
-    }
-}
+// const singleTodoFailure=(payload)=>{
+//     return {
+//         type:types.SINGLE_TODO_FAILURE,
+//         payload
+//     }
+// }
 
 
-export const singleTodoFetch=(payload)=>(dispatch)=>{
-    dispatch(singleTodoRequest());
+// export const singleTodoFetch=(payload)=>(dispatch)=>{
+//     dispatch(singleTodoRequest());
 
-    axios.get(`http://localhost:8080/todos/${payload}`).then((r)=>
-        dispatch(singleTodoSuccess(r.data))
-        // console.log(r.data)
-    )
-    .catch((e)=>dispatch(singleTodoFailure(e.data)))
-}
+//     axios.get(`http://localhost:8080/todos/${payload}`).then((r)=>
+//         dispatch(singleTodoSuccess(r.data))
+//         // console.log(r.data)
+//     )
+//     .catch((e)=>dispatch(singleTodoFailure(e.data)))
+// }
 
 
 
@@ -157,4 +157,47 @@ export const deleteTodoFetch=(payload)=>(dispatch)=>{
         // console.log(r.data)
     )
     .catch((e)=>dispatch(deleteTodoFailure(e.data)))
+}
+
+
+
+// *********************************TOGGLE**************************************************
+
+
+
+
+
+
+const toggleTodoRequest=(payload)=>{
+    return {
+        type:types.TOGGLE_TODO_REQUEST,
+        payload
+    }
+}
+
+
+const toggleTodoSuccess=(payload)=>{
+    return {
+        type:types.TOGGLE_TODO_SUCCESS,
+        payload
+    }
+}
+
+
+const toggleTodoFailure=(payload)=>{
+    return {
+        type:types.TOGGLE_TODO_FAILURE,
+        payload
+    }
+}
+
+
+export const toggleTodoFetch=(payload)=>(dispatch)=>{
+    dispatch(toggleTodoRequest());
+
+    axios.patch(`http://localhost:8080/todos/${payload.id}`,{isComplited:payload.status}).then((r)=>
+        dispatch(toggleTodoSuccess(r.data))
+        // console.log(r.data)
+    )
+    .catch((e)=>dispatch(toggleTodoFailure(e.data)))
 }

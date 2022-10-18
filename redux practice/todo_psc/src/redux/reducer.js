@@ -40,7 +40,37 @@ export const reducer=(state=init,{type,payload})=>{
 
 
 
-        case types.SINGLE_TODO_REQUEST:{
+        // case types.SINGLE_TODO_REQUEST:{
+        //     return {
+        //         ...state,
+        //         loading:true,
+        //         error:false
+        //     }
+        // }
+
+        // case types.SINGLE_TODO_SUCCESS:{
+        //     return {
+        //         ...state,
+        //         loading:false,
+        //         error:false,
+        //         single:payload
+        //     }
+        // }
+
+        // case types.SINGLE_TODO_FAILURE:{
+        //     return {
+        //         ...state,
+        //         loading:false,
+        //         error:true
+        //     }
+        // }
+
+
+
+        // ************************************toggle****************************************************
+
+
+        case types.TOGGLE_TODO_REQUEST:{
             return {
                 ...state,
                 loading:true,
@@ -48,23 +78,27 @@ export const reducer=(state=init,{type,payload})=>{
             }
         }
 
-        case types.SINGLE_TODO_SUCCESS:{
+        case types.TOGGLE_TODO_SUCCESS:{
+
+            let newTodo=state.todos.map((e)=>payload.id==e.id ? payload: e);
+            console.log("payload",payload)
+
             return {
                 ...state,
                 loading:false,
                 error:false,
-                single:payload
+                 todos:newTodo
+                 
             }
         }
 
-        case types.SINGLE_TODO_FAILURE:{
+        case types.TOGGLE_TODO_FAILURE:{
             return {
                 ...state,
                 loading:false,
                 error:true
             }
         }
-
 
 
         default:{

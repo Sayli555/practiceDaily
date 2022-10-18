@@ -23,8 +23,7 @@ console.log("todos",todos)
         <div >
         <Link to={`/todos/${e.id}`} >
             <h2>{e.title}</h2>
-            <p>stats:- {e.isComplited}</p>
-            <button>Toggle</button>
+      
         </Link>   
         </div>
     ))}

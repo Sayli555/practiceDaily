@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       
       <Routes>
-          <Route path="/todos" element={<TodoPost/>} />
+          <Route path="/" element={<TodoPost/>} />
           <Route path="/todos/:id" element={<TodoSingle/>} />
           <Route path="/" element={<Todos/>} />
       </Routes>
