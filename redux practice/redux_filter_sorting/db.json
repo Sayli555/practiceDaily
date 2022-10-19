@@ -1,0 +1,109 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "author": "Masai",
+      "no_of_chapter":6,
+      "cover_photo":"",
+      "book_name":"Full-Stack-Web-Developer",
+      "category":"Novel",
+      "release_year":2019,
+      "chapter":[
+        {"name":"HTML","pages":25},
+        {"name":"CSS","pages":20}
+      ]     
+    },
+    {
+      "id": 2,
+      "author": "Masai",
+      "no_of_chapter":6,
+      "cover_photo":"",
+      "book_name":"Full-Stack-Web-Developer",
+      "category":"Science_friction",
+      "release_year":2018,
+      "chapter":[
+        {"name":"HTML","pages":25},
+        {"name":"CSS","pages":20}
+      ]     
+    },
+    {
+      "id": 3,
+      "author": "Masai",
+      "no_of_chapter":6,
+      "cover_photo":"",
+      "book_name":"Full-Stack-Web-Developer",
+      "category":"Novel",
+      "release_year":2025,
+      "chapter":[
+        {"name":"HTML","pages":25},
+        {"name":"CSS","pages":20}
+      ]     
+    },
+    {
+      "id": 4,
+      "author": "Masai",
+      "no_of_chapter":6,
+      "cover_photo":"",
+      "book_name":"Full-Stack-Web-Developer",
+      "category":"Science_friction",
+      "release_year":2022,
+      "chapter":[
+        {"name":"HTML","pages":25},
+        {"name":"CSS","pages":20}
+      ]     
+    },
+    {
+      "id": 5,
+      "author": "Masai",
+      "no_of_chapter":6,
+      "cover_photo":"",
+      "book_name":"Full-Stack-Web-Developer",
+      "category":"Thriller",
+      "release_year":2020,
+      "chapter":[
+        {"name":"HTML","pages":25},
+        {"name":"CSS","pages":20}
+      ]     
+    },
+    {
+      "id": 6,
+      "author": "Masai",
+      "no_of_chapter":6,
+      "cover_photo":"",
+      "book_name":"Full-Stack-Web-Developer",
+      "category":"Novel",
+      "release_year":2025,
+      "chapter":[
+        {"name":"HTML","pages":25},
+        {"name":"CSS","pages":20}
+      ]     
+    },
+    {
+      "id": 7,
+      "author": "Masai",
+      "no_of_chapter":6,
+      "cover_photo":"",
+      "book_name":"Full-Stack-Web-Developer",
+      "category":"Novel",
+      "release_year":2019,
+      "chapter":[
+        {"name":"HTML","pages":25},
+        {"name":"CSS","pages":20}
+      ]     
+    },
+    {
+      "id": 8,
+      "author": "Masai",
+      "no_of_chapter":6,
+      "cover_photo":"",
+      "book_name":"Full-Stack-Web-Developer",
+      "category":"Science_friction",
+      "release_year":2024,
+      "chapter":[
+        {"name":"HTML","pages":25},
+        {"name":"CSS","pages":20}
+      ]     
+    }
+  ]
+  
+}

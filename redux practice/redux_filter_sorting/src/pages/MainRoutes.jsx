@@ -1,14 +1,18 @@
 import React from 'react'
 import { Route,Routes } from 'react-router-dom'
+import Admin from './Admin'
+import Books from './Books'
+import BooksEdit from './BooksEdit'
+import SingleBooks from './SingleBooks'
 
 const MainRoutes = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" />
-        <Route path="/books/:id" />
-        <Route path="/books/:id/edit" />
-        <Route path="/admin" />
+        <Route path="/" element={<Books/>} />
+        <Route path="/books/:id"  element={<SingleBooks/>} />
+        <Route path="/books/:id/edit" element={<BooksEdit/>} />
+        <Route path="/admin" element={<Admin/>} />
         <Route path="*" element={<div>Page Not Found</div>} />
       </Routes>
     </div>
