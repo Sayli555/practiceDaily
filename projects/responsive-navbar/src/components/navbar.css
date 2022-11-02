@@ -1,0 +1,77 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 75px;
+    background-color: teal;
+    color: white;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    width: 75%;
+}
+
+.about,
+.home,
+.contact,
+.skills,
+.signup{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.mobile-menu-icons{
+    display: none;
+}
+
+@media screen and (max-width:780px) {
+    .logo{
+        display: flex;
+        position: absolute;
+        left: 35px;
+    }
+    .nav-links{
+        display: none;
+    }
+    .nav-mobile-links{
+        display: block;
+        position: absolute;
+        list-style: none;
+        background-color: teal;
+        right: 0;
+        top: 75px;
+        transition: all 0.5s ease-out;
+        width: 50%;
+    }
+    .about,
+.home,
+.contact,
+.skills,
+.signup{
+    transition: all 0.5s ease;
+}
+
+.mobile-menu-icons{
+    display: block;
+    position: absolute;
+    font-size: 30px;
+    border: none;
+    outline: none;
+    background-color: teal;
+    color: white;
+    right: 25px;
+}
+}
