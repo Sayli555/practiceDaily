@@ -1,0 +1,7 @@
+.product-main-div{
+  width: 95%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3,31%);
+  grid-template-rows: repeat(auto,350px);
+}

@@ -1,0 +1,205 @@
+{
+  "mens": [
+    {
+      "id": "62720de20b3db42170ba03e6",
+      "Name": "BARBOUR Mens Green Plaid Button Down Casual Shirt",
+      "brand": "BOBBI",
+      "imageurl": "https://img.shop.com/Image/270000/278100/278132/products/1925889439.jpg?size=400x400",
+      "typeofproduct": "Men's shirt",
+      "price": 2000,
+      "createdAt": "2022-05-04T05:23:46.196Z",
+      "updatedAt": "2022-05-04T05:23:46.196Z"
+    },
+    {
+      "id": "62720e5f0b3db42170ba03e8",
+      "Name": "K-Swiss Mens Sweatshirt Fitness Hoodie",
+      "brand": "BHFO",
+      "imageurl": "https://img.shop.com/Image/270000/273200/273200/products/1900647367.jpg?size=400x400",
+      "typeofproduct": "Women's Hoodie",
+      "price": 2000,
+      "createdAt": "2022-05-04T05:25:51.853Z",
+      "updatedAt": "2022-05-04T05:25:51.853Z"
+    },
+    {
+      "id": "62720eea0b3db42170ba03ea",
+      "Name": "DOCKERS Mens Navy Flat Front Easy Care Stretch Straight Leg Slim Fit Performance Stretch",
+      "brand": "BOBBI",
+      "imageurl": "https://img.shop.com/Image/270000/278100/278132/products/1918856539.jpg?size=400x400",
+      "typeofproduct": "Men's Slim Fit",
+      "price": 2000,
+      "createdAt": "2022-05-04T05:28:10.360Z",
+      "updatedAt": "2022-05-04T05:28:10.360Z"
+    },
+    {
+      "id": "62720f1d0b3db42170ba03ec",
+      "Name": "Natty Light Natural History Rowdy Gentleman Blue Men's T-Shirt",
+      "brand": " Merch",
+      "imageurl": "https://img.shop.com/Image/260000/269300/269358/products/1857898430.jpg?size=400x400",
+      "typeofproduct": "Men's Slim Fit",
+      "price": 1000,
+      "createdAt": "2022-05-04T05:29:01.841Z",
+      "updatedAt": "2022-05-04T05:29:01.841Z"
+    },
+    {
+      "id": "62720f880b3db42170ba03ee",
+      "Name": "HUGO BOSS Mens Black Lined Single Breasted Extra Slim Fit Suit Separate",
+      "brand": "BOBBI",
+      "imageurl": "https://img.shop.com/Image/270000/278100/278132/products/1921790259.jpg?size=400x400",
+      "typeofproduct": "Men's Slim Fit suit",
+      "price": 8000,
+      "createdAt": "2022-05-04T05:30:48.735Z",
+      "updatedAt": "2022-05-04T05:30:48.735Z"
+    },
+    {
+      "id": "6272102b0b3db42170ba03f0",
+      "Name": "Pink Floyd Men's Dark Side Of The Moon Prism Splatter Dye Adult T-Shirt",
+      "brand": "Seven Times Six",
+      "imageurl": "https://img.shop.com/Image/250000/254500/254570/products/1791522772.jpg?size=400x400",
+      "typeofproduct": "Men's Tshirt",
+      "price": 1500,
+      "createdAt": "2022-05-04T05:33:31.514Z",
+      "updatedAt": "2022-05-04T05:33:31.514Z"
+    },
+    {
+      "id": "627211490b3db42170ba03f2",
+      "Name": "Mens 100% Cotton Ribbed Knee High Socks (Pack Of 3)",
+      "brand": "Pertemba US",
+      "imageurl": "https://img.shop.com/Image/280000/289900/289943/products/1907402964.jpg?size=400x400",
+      "typeofproduct": "Men's Socks",
+      "price": 500,
+      "createdAt": "2022-05-04T05:38:17.937Z",
+      "updatedAt": "2022-05-04T05:38:17.937Z"
+    },
+    {
+      "id": "627211870b3db42170ba03f4",
+      "Name": "The Mens store Mens White Classic Fit Button Down Casual Shirt)",
+      "brand": " BOBBI",
+      "imageurl": "https://img.shop.com/Image/270000/278100/278132/products/1921266290.jpg?size=400x400",
+      "typeofproduct": "Men's Shirt",
+      "price": 2500,
+      "createdAt": "2022-05-04T05:39:19.781Z",
+      "updatedAt": "2022-05-04T05:39:19.781Z"
+    },
+    {
+      "id": "627211d50b3db42170ba03f6",
+      "Name": "Brooklyn Brigade Men's Standard-Fit 9",
+      "brand": " BOBBI",
+      "imageurl": "https://img.shop.com/Image/240000/243400/243406/products/1851724987.jpg?size=400x400",
+      "typeofproduct": "Men's Shorts",
+      "price": 980,
+      "createdAt": "2022-05-04T05:40:37.400Z",
+      "updatedAt": "2022-05-04T05:40:37.400Z"
+    },
+    {
+      "id": "627212220b3db42170ba03f8",
+      "Name": "Boss x Nba Men's Relaxed-Fit Shorts",
+      "brand": "Macy's",
+      "imageurl": "https://img.shop.com/Image/240000/243400/243406/products/1927496055.jpg?size=400x400",
+      "typeofproduct": "Men's Shorts",
+      "price": 1080,
+      "createdAt": "2022-05-04T05:41:54.143Z",
+      "updatedAt": "2022-05-04T05:41:54.143Z"
+    },
+    {
+      "id": "6272125c0b3db42170ba03fa",
+      "Name": "Mens 100% Cotton Ribbed /Rib Classic Casual Crew Socks (Pack Of 6) US Size 7-12",
+      "brand": "Macy's",
+      "imageurl": "https://img.shop.com/Image/280000/289900/289943/products/1907391135.jpg?size=400x400",
+      "typeofproduct": "Men's Socks",
+      "price": 580,
+      "createdAt": "2022-05-04T05:42:52.594Z",
+      "updatedAt": "2022-05-04T05:42:52.594Z"
+    },
+    {
+      "id": "627212980b3db42170ba03fc",
+      "Name": "Boss x Nba Men's Tracksuit Bottoms",
+      "brand": "Macy's",
+      "imageurl": "https://img.shop.com/Image/240000/243400/243406/products/1926552073.jpg?size=400x400",
+      "typeofproduct": "Men's Tracksuit",
+      "price": 3000,
+      "createdAt": "2022-05-04T05:43:52.425Z",
+      "updatedAt": "2022-05-04T05:43:52.425Z"
+    },
+    {
+      "id": "627212f10b3db42170ba03fe",
+      "Name": "Ecko Unltd. Men's Jeans Blue 36X31 Denim Stretch Skinny Fit",
+      "brand": "Authentic Designer Fashion",
+      "imageurl": "https://img.shop.com/Image/260000/266700/266752/products/1886479534.jpg?size=400x400",
+      "typeofproduct": "Men's Tracksuit",
+      "price": 3500,
+      "createdAt": "2022-05-04T05:45:21.928Z",
+      "updatedAt": "2022-05-04T05:45:21.928Z"
+    },
+    {
+      "id": "6272141c0b3db42170ba0400",
+      "Name": "BOSS Hugo Boss Slim Fit Wool Sport Coat",
+      "brand": "Authentic Designer Fashion",
+      "imageurl": "https://img.shop.com/Image/240000/248200/248295/products/1902022725.jpg?size=400x400",
+      "typeofproduct": "Men's Wool Coat",
+      "price": 5500,
+      "createdAt": "2022-05-04T05:50:20.367Z",
+      "updatedAt": "2022-05-04T05:50:20.367Z"
+    },
+    {
+      "id": "627214640b3db42170ba0402",
+      "Name": "Greenwich Cotton Polo Shirt",
+      "brand": "Authentic Designer Fashion",
+      "imageurl": "https://img.shop.com/Image/270000/273800/273802/products/1761136199.jpg?size=400x400",
+      "typeofproduct": "Men's tshirt",
+      "price": 1500,
+      "createdAt": "2022-05-04T05:51:32.316Z",
+      "updatedAt": "2022-05-04T05:51:32.316Z"
+    },
+    {
+      "id": "627214a60b3db42170ba0404",
+      "Name": "Boss x Nba Men's Relaxed-Fit T-Shirt",
+      "brand": "Macy's",
+      "imageurl": "https://img.shop.com/Image/240000/243400/243406/products/1926552146.jpg?size=400x400",
+      "typeofproduct": "Men's tshirt",
+      "price": 2500,
+      "createdAt": "2022-05-04T05:52:38.392Z",
+      "updatedAt": "2022-05-04T05:52:38.392Z"
+    },
+    {
+      "id": "627214f20b3db42170ba0406",
+      "Name": "Ecko Unltd. Mens Velocity Wash C Plus Slim Fit Jeans",
+      "brand": "Macy's",
+      "imageurl": "https://img.shop.com/Image/250000/253200/253251/products/1007731246.jpg?size=400x400",
+      "typeofproduct": "Men's slim fit jeans",
+      "price": 5500,
+      "createdAt": "2022-05-04T05:53:54.540Z",
+      "updatedAt": "2022-05-04T05:53:54.540Z"
+    },
+    {
+      "id": "627215280b3db42170ba0408",
+      "Name": "LEVI'S Mens Maroon Jeanss",
+      "brand": "BOBBI",
+      "imageurl": "https://img.shop.com/Image/270000/278100/278132/products/1899126739.jpg?size=400x400",
+      "typeofproduct": "Men's slim fit jeans",
+      "price": 5500,
+      "createdAt": "2022-05-04T05:54:48.819Z",
+      "updatedAt": "2022-05-04T05:54:48.819Z"
+    },
+    {
+      "id": "627215560b3db42170ba040a",
+      "Name": "Mvp Collections Men's Big & Tall Denim Biker Jean",
+      "brand": "Macy's",
+      "imageurl": "https://img.shop.com/Image/240000/243400/243406/products/1792345282.jpg?size=400x400",
+      "typeofproduct": "Men's slim fit jeans",
+      "price": 3500,
+      "createdAt": "2022-05-04T05:55:34.575Z",
+      "updatedAt": "2022-05-04T05:55:34.575Z"
+    },
+    {
+      "id": "6272159c0b3db42170ba040c",
+      "Name": "BOSS Hugo Boss Slim Fit Wool Sport Coat",
+      "brand": "Macy's",
+      "imageurl": "https://img.shop.com/Image/240000/248200/248295/products/1902022725.jpg?size=400x400",
+      "typeofproduct": "Men's Coat",
+      "price": 10500,
+      "createdAt": "2022-05-04T05:56:44.398Z",
+      "updatedAt": "2022-05-04T05:56:44.398Z"
+    }
+  ]
+  
+}
