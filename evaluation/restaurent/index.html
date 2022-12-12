@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <style>
+      /* All Your css for Home page goes here  */
+#restaurant-container{
+  display: grid;
+  width: 100%;
+  margin: auto;
+  grid-template-columns: repeat(4,23%);
+  grid-gap: 20px;
+}
+#restaurant-container img{
+  width:100%;
+}
+      
+    </style>
+  </head>
+
+  <body>
+    <div class="nav">
+      <h1>Masai Restaurant Finder</h1>
+      <a href="./index.html">Home</a>
+      <a href="./favourites.html">Favourites</a>
+    </div>
+    <select id="filter">
+      <option value="">Filter By Category</option>
+      <option value="cafe">cafe</option>
+      <option value="ethnic">ethnic</option>
+      <option value="fast_food">fast_food</option>
+    </select>
+    <h1 id="alert"></h1>
+    <div id="restaurant-container">
+      <!-- Here Append All the Products  -->
+    </div>
+  </body>
+  <script>
+    const url = `https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/getrestaurants?limit=30`;
+    let filterdata=document.getElementById("filter");
+    filterdata.addEventListener("change",getDataForFilter)
+    async function getDataForFilter(){
+      var category=filter.value;
+    const data=await fetch(url);
+    const res=await data.json();
+    var restaurant=res.data;
+    if(category==""){
+      return restaurant
+    appendData(restaurant);
+    // console.log("datafilter",category,restaurant)
+   }
+   else{
+   var datastore= restaurant.filter((el)=>el.type==category)
+   appendData(datastore);
+    return datastore
+    
+   }
+} 
+
+
+// function filterchange(){
+  
+//   var category=filter.value;
+  
+//    if(category==""){
+//     appendData(restaurant);
+//     // console.log("datafilter",category,restaurant)
+//    }
+//   else{
+//    var data= restaurant.filter((el)=>el.type==category)
+//     console.log("datafilter",data)
+//     appendData(data);
+//    }
+   
+// }
+
+
+
+    // All your JS code for Home Page goes here;
+
+   
+
+    // filter.addEventListener("change",filterchange);
+
+    let alertbtn=document.getElementById("alert")
+
+    async function getData(){
+    
+
+        const data=await fetch(url);
+        const res=await data.json();
+        var restaurant=res.data;
+        appendData(restaurant);
+    }   
+    getData();
+
+    function appendData(data){
+      document.getElementById("restaurant-container").innerHTML=""
+      data.map((e)=>{
+        let div=document.createElement("div");
+        let img=document.createElement("img");
+        img.setAttribute("src",e.image);
+        let name=document.createElement("h2");
+        name.textContent=e.name
+        let price=document.createElement("h3");
+        price.textContent=`Rs ${e.price_starts_from}`
+        let type=document.createElement("p")
+        type.textContent=e.type;
+        let rating=document.createElement("p");
+        rating.textContent=e.rating;
+        let button=document.createElement("button");
+        button.textContent="Favourites";
+        button.addEventListener("click",addData);
+
+        function addData(){
+          
+          var adddata=JSON.parse(localStorage.getItem("favourites"))||[];
+          let findData=adddata.find((el)=>el.id==e.id);
+          if(findData){
+            alertbtn.textContent="Restaurant Already in Favourites"
+          }
+          else{
+            adddata.push(e);
+            alertbtn.textContent="Restaurant Added To Favourites";   
+          }
+          localStorage.setItem("favourites",JSON.stringify(adddata));
+        }
+        div.append(img,name,price,type,rating,button);
+        document.getElementById("restaurant-container").append(div)
+      })
+    }
+
+  </script>
+</html>

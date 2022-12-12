@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favourites Page</title>
+    <style>
+      /* All Your css for Favourites page goes here  */
+
+      button{
+        background-color: red;
+      }
+      #fav-container{
+  display: grid;
+  width: 100%;
+  margin: auto;
+  grid-template-columns: repeat(4,23%);
+  grid-gap: 20px;
+}
+#fav-container img{
+  width:100%;
+}
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <h1>Masai Restaurant Finder</h1>
+      <a href="./index.html">Home</a>
+      <a href="./favourites.html">Favourites</a>
+    </div>
+    <h1 id="total">Your a total <span id="fav-total">0</span> elements in the favourites</h1>
+    <div id="fav-container">
+      <!-- Here Append All the Favourites-->
+    </div>
+  </body>
+  <script>
+    // All your JS code for Favourites Page goes here;
+
+    let rest=JSON.parse(localStorage.getItem("favourites"))||[];
+    let total=rest.length;
+    let count=document.getElementById("fav-total");
+    count.textContent=total
+    appendData(rest)
+    function appendData(data){
+      document.getElementById("fav-container").innerHTML=""
+      data.map((e)=>{
+        let div=document.createElement("div");
+        let img=document.createElement("img");
+        img.setAttribute("src",e.image);
+        let name=document.createElement("h2");
+        name.textContent=e.name
+        let price=document.createElement("h3");
+        price.textContent=`Rs ${e.price_starts_from}`
+        let type=document.createElement("p")
+        type.textContent=e.type;
+        let rating=document.createElement("p");
+        rating.textContent=e.rating;
+        let button=document.createElement("button");
+        button.textContent="Delete";
+        button.addEventListener("click",DeleteData)
+        function DeleteData(){
+
+
+          var favData = JSON.parse(localStorage.getItem("favourites"))    
+          favData = favData.filter(function(el){
+                return el.id!==e.id
+            })
+            localStorage.setItem("favourites",JSON.stringify(favData))
+                window.location.reload()
+        
+         
+
+        }
+        div.append(img,name,price,type,rating,button);
+        document.getElementById("fav-container").append(div)
+      })
+    }
+
+
+
+  </script>
+</html>
